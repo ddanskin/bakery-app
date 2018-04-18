@@ -1,14 +1,14 @@
 class Baked_Good
     attr_accessor :type, :flavor, :topping, :filling, :allergens, :description, :image
 
-    def initialize(type, flavor, topping, filling, allergens, description, image)
-        @type = type
-        @flavor = flavor
-        @topping = topping
-        @filling = filling
-        @allergens = allergens
-        @description = description
-        @image = image
+    def initialize(args)
+        @type = args[:type]
+        @flavor = args[:flavor]
+        @topping = args[:topping]
+        @filling = args[:filling]
+        @allergens = args[:allergens]
+        @description = args[:description]
+        @image = args[:image]
     end
 
 end

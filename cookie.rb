@@ -1,6 +1,7 @@
 require_relative 'baked_good'
 
 class Cookie < Baked_Good
-    def initialize
+    def initialize(args)
+        super(args)
     end
 end
