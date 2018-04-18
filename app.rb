@@ -1,10 +1,10 @@
 require 'sinatra'
 require 'sendgrid-ruby'
 
-include 'SendGrid'
+include SendGrid
 
 get '/' do
-
+    erb :index
 end
 
 post '/' do
