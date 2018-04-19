@@ -1,0 +1,14 @@
+<h1>Bakery Inventory</h1>
+<div class="inventory">
+    <ul class="product_description">
+    <% @inventory.cakes.each do |key, value| %>
+        <li>cake <%= value.flavor %> </li>
+    <% end %>
+    <% @inventory.cookies.each do |key, value| %>
+        <li>cookie <%= value.flavor %> </li>
+    <% end %>
+    <% @inventory.muffins.each do |key, value| %>
+        <li>muffin <%= value.flavor %> </li>
+    <% end %>
+    </ul>
+</div>

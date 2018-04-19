@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vw;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 30vw;
+}
+
+.product_description {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
