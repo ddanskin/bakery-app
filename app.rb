@@ -31,7 +31,7 @@ end
 
 get '/menu' do
     @items = $bakery
-    erb :index
+    erb :menu_full
 end
 
 get '/cakes' do

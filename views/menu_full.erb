@@ -1,0 +1,13 @@
+<div class='full_menu'>
+    <ul class="product_description">
+    <% @items.cakes.each do |key, value| %>
+        <li>cake <%= value.flavor %> </li>
+    <% end %>
+    <% @items.cookies.each do |key, value| %>
+        <li>cookie <%= value.flavor %> </li>
+    <% end %>
+    <% @items.muffins.each do |key, value| %>
+        <li>muffin <%= value.flavor %> </li>
+    <% end %>
+    </ul>
+</div>
