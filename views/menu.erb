@@ -1,10 +1,26 @@
 <% @item_list.each do |key, value| %>
-    <div class="item">
-        <ul class="product_description">
-            <li><%= value.description %></li>
-            <li>allergens:<%= value.allergens %></li>
-            <li><%= value.price %></li>
-        </ul>
+    <div class="card">
+        <div class="card-image">
+            <img src=<%= value.image %>>
+        </div>
+        <div class="card-content">
+            <p><%= value.description %></p>
+            <p><%= value.price %></p>
+        </div>
+        <div class="card-tabs">
+            <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#more">More Details</a></li>
+                <li class="tab"><a class="active" href="#allergy">Allergens</a></li>
+            </ul>
+        </div>
+        <div class="card-content grey lighten-4">
+            <div id="more">
+                <%= value.topping %>
+                <%= value.filling %>
+            </div>
+            <div id="allergy">
+                <%= value.allergens %>
+            </div>
+        </div>
     </div>
 <% end %>
-
