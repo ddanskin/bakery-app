@@ -1,50 +1,61 @@
 <!DOCTYPE html5>
 <html>
     <head>
+        <title>Friendly Bakery</title>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         <link rel="stylesheet" href="<%= url("/main.css") %>">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
         <div class='container'>
-            <div class='header'>
-                <a href='/index' class='logo'>Bakery Logo</a>
-                <ul>
-                    <li><a href='/about'>ABOUT</a></li>
-                    <li><div class="dropdown">
-                        <a href='/menu'>Menu</a>
-                        <div class="dropdown-content">
-                            <a href='/cakes'>Cakes</a>
-                            <a href='/cookies'>Cookies</a>
-                            <a href='/muffins'>Muffins</a>
-                        </div>
-                    </div></li>
-                    <li><a href='/visit'>VISIT</a></li>
-                </ul>
-            </div>
+            <nav>
+                <div class="nav-wrapper">
+                  <a href="/" class="brand-logo">Friendly Bakery</a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                      <li><a href='/about'>ABOUT</a></li>
+                      <li><div class="dropdown">
+                              <a href='/menu'>MENU</a>
+                              <div class="dropdown-content">
+                                  <a href='/cakes'>Cakes</a>
+                                  <a href='/cookies'>Cookies</a>
+                                  <a href='/muffins'>Muffins</a>
+                              </div>
+                      </div></li>
+                      <li><a href='/visit'>VISIT</a></li>
+                  </ul>
+                </div>
+            </nav>
             <div class='content'>
                 <%= yield %>
             </div>
-            <div class='footer'>
-                <div class='more_links'>
-                    <ul>
-                        <li><a href='/about'>ABOUT</a></li>
-                        <li><a href='/menu'>MENU</a></li>
-                        <li><a href='/visit'>VISIT</a></li>
-                        <li><a href='/admin'>ADMIN</a></li>
-                    </ul>
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l4 offset-l2 s12">
+                            <h5 class="white-text">Links</h5>
+                            <ul>
+                                <li><a class="grey-text text-lighten-3" href="/about">ABOUT</a></li>
+                                <li><a class="grey-text text-lighten-3" href="/menu">MENU</a></li>
+                                <li><a class="grey-text text-lighten-3" href="/visit">VISIT</a></li>
+                                <li><a class="grey-text text-lighten-3" href="/admin">ADMIN</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class='copyright'>
-                    <p>Copyright Bakery 2018</p>
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2018 Friendly Bakery
+                        <a class="grey-text text-lighten-4 right" href="#!">YELP</a>
+                    </div>
                 </div>
-                <div class='social_links'>
-                    <ul>
-                        <li><a href='www.yelp.com'>Y</a></li>
-                        <li><a href='www.facebook.com'>F</a></li>
-                        <li><a href='www.instagram.com'>I</a></li>
-                        <li><a href='www.pinterest.com'>P</a></li>
-                        <li><a href='www.twitter.com'>T</a></li>
-                    </ul>
-                </div>
-            </div>
+            </footer>
         </div>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
     </body>
 </html>
