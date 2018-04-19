@@ -1,13 +1,22 @@
 <div class='full_menu'>
-    <ul class="product_description">
-    <% @items.cakes.each do |key, value| %>
-        <li>cake <%= value.flavor %> </li>
-    <% end %>
-    <% @items.cookies.each do |key, value| %>
-        <li>cookie <%= value.flavor %> </li>
-    <% end %>
-    <% @items.muffins.each do |key, value| %>
-        <li>muffin <%= value.flavor %> </li>
-    <% end %>
-    </ul>
+    <div class="item">
+        <a href='/cakes'>
+            <img src="/images/cake.jpg">
+            <h3>CAKES</h3>
+        </a>
+    </div>
+    
+    <div class="item">
+        <a href='/cookies'>
+            <img src="/images/cookies.jpg">
+            <h3>COOKIES</h3>
+        </a>
+    </div>
+    
+    <div class="item">
+        <a href='/muffins'>
+            <img src="/images/muffins.jpg">
+            <h3>MUFFINS</h3>
+        </a>
+    </div>
 </div>
