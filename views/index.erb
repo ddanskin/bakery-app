@@ -1,24 +1,29 @@
-<div class='email_form'>
-    <form action='/email' method='POST'>
+<div class="row">
+    <form class="col s12" action='/email' method='POST'>
         <h4>JOIN OUR MAILING LIST!</h4>
         <p>Get updates on our tasty offerings and sweet deals delivered to your inbox!</p>
-        <input name='email'>
-        <button type='submit'>Submit</button>
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="email" type="email" class="validate">
+                <label for="email">Email</label>
+                <span class="helper-text" data-error="wrong" data-success="right">ex: your_name@email.com</span>
+            </div>
+        </div>
     </form>
 </div>
 
-<div class='row'>
-    <div class="col s12 m6 l3 bakery_items">
+<div class='row center'>
+    <div class="col s12 m6 l4 bakery_items">
         <img class="featured" src="/images/cake.jpg">
         <a href='/cakes'><h3>CAKES</h3></a>
     </div>
     
-    <div class="col s12 m6 l3 bakery_items">
+    <div class="col s12 m6 l4 bakery_items">
         <img class="featured" src="/images/cookies.jpg">
         <a href='/cookies'><h3>COOKIES</h3></a>
     </div>
     
-    <div class="col s12 m6 l3 bakery_items">
+    <div class="col s12 m6 l4 bakery_items">
         <img class+"featured" src="/images/muffins.jpg">
         <a href='/muffins'><h3>MUFFINS</h3></a>
     </div>

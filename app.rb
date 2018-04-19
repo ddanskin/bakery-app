@@ -28,10 +28,6 @@ get '/about' do
     erb :about
 end
 
-get '/menu' do
-    erb :menu_full
-end
-
 get '/cakes' do
     @item_list = $bakery.cakes
     erb :menu
@@ -59,12 +55,13 @@ get '/admin' do
 end
 
 post '/email' do
+    @inventory = $bakery
     email = params[:email]
-    text = "This is the bakery catalog"
+    text = (erb :admin)
     from = Email.new(email: 'danielle.danskin@gmail.com')
     to = Email.new(email: email)
     subject = 'bakery catalog'
-    content = Content.new(type: 'text/plain', value: text )
+    content = Content.new(type: 'text/html', value: text)
     mail = Mail.new(from, subject, to, content)
     sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
     response = sg.client.mail._('send').post(request_body: mail.to_json)
