@@ -38,3 +38,11 @@ ul {
     flex-direction: row;
     list-style-type: none;
 }
+
+.main_img img{
+    display: flex;
+    width: 40%;
+    height: auto;
+}
+
+
