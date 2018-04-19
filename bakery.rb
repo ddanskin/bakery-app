@@ -5,10 +5,11 @@ require_relative 'muffin'
 class Bakery
     attr_accessor :cakes, :cookies, :muffins
 
-    def initialize(cakes={}, cookies={}, muffins={})
+    def initialize(cakes={}, cookies={}, muffins={}, featured={})
         @cakes = cakes
         @cookies = cookies
         @muffins = muffins
+        @featured = featured
     end
 
     def add_item(item_type, item)

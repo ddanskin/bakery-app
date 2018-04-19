@@ -21,7 +21,6 @@ $bakery.muffins[@new_muffin_two.flavor.to_sym] = @new_muffin_two
 $bakery.muffins[@new_muffin_three.flavor.to_sym] = @new_muffin_three
 
 get '/' do
-    @items = $bakery
     erb :index
 end
 
@@ -30,7 +29,6 @@ get '/about' do
 end
 
 get '/menu' do
-    @items = $bakery
     erb :menu_full
 end
 
