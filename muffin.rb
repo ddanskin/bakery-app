@@ -5,3 +5,4 @@ class Muffin < Baked_Good
         super(args)
     end
 end
+

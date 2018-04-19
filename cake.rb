@@ -5,3 +5,4 @@ class Cake < Baked_Good
         super(args)
     end
 end
+

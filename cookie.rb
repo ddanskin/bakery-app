@@ -5,3 +5,4 @@ class Cookie < Baked_Good
         super(args)
     end
 end
+
