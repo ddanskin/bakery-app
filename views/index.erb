@@ -1,9 +1,11 @@
 <div class='content'>
     <div class='modal'>
-        <h4>JOIN OUR MAILING LIST!</h4>
-        <p>Get updates on our tasty offerings and sweet deals delivered to your inbox!</p>
-        <input name='email'>
-        <button type='submit'>Submit</button>
+        <form action='/email' method='POST'>
+            <h4>JOIN OUR MAILING LIST!</h4>
+            <p>Get updates on our tasty offerings and sweet deals delivered to your inbox!</p>
+            <input name='email'>
+            <button type='submit'>Submit</button>
+        </form>
     </div>
     <h2>New Treats</h2>
     <div class='featured'>

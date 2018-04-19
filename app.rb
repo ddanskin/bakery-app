@@ -58,6 +58,18 @@ get '/admin' do
     erb :admin
 end
 
-post '/' do
-
+post '/email' do
+    email = params[:email]
+    text = "This is the bakery catalog"
+    from = Email.new(email: 'danielle.danskin@gmail.com')
+    to = Email.new(email: email)
+    subject = 'bakery catalog'
+    content = Content.new(type: 'text/plain', value: text )
+    mail = Mail.new(from, subject, to, content)
+    sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+    response = sg.client.mail._('send').post(request_body: mail.to_json)
+    puts response.status_code
+    puts response.body
+    puts response.parsed_body
+    puts response.headers
 end
