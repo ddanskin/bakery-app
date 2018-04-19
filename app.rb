@@ -50,7 +50,8 @@ get '/muffins' do
 end
 
 get '/visit' do
-    @go = "https://www.google.com/maps/embed/v1/place?key=#{ENV['GMAP_API_KEY']}&q=90+John+Street,New+York,NY"
+    gmap = ENV['GMAP_API_KEY']
+    @go = "https://www.google.com/maps/embed/v1/place?key=#{gmap}&q=90+John+Street,New+York,NY"
     erb :contact
 end
 
