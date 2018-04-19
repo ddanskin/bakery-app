@@ -8,14 +8,6 @@ body {
     flex-direction: column;
     justify-content: center;
 }
-
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 10vw;
-}
-
 .dropdown {
     position: relative;
     display: inline-block;
@@ -34,28 +26,6 @@ body {
 .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
-}
-.content {
-    display: flex;
-    flex-direction: column;
-    height: 30vw;
-}
-
-.product_description {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
 }
 
 .main_img img{
