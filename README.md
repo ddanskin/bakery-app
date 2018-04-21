@@ -12,4 +12,4 @@ To create a full stack web app for a fictional bakery that included multiple pag
 * SendGrid API
 
 # License
-MIT &amp; ddanskin
+MIT &copy; ddanskin
