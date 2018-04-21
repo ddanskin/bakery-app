@@ -54,7 +54,7 @@ get '/admin' do
     erb :admin
 end
 
-post '/email' do
+post '/index' do
     @inventory = $bakery
     email = params[:email]
     text = (erb :admin)
@@ -65,8 +65,9 @@ post '/email' do
     mail = Mail.new(from, subject, to, content)
     sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
     response = sg.client.mail._('send').post(request_body: mail.to_json)
-    puts response.status_code
-    puts response.body
-    puts response.parsed_body
-    puts response.headers
+    #puts response.status_code
+    #puts response.body
+    #puts response.parsed_body
+    #puts response.headers
+    erb :index
 end
