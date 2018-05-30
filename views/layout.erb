@@ -11,27 +11,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-        <div class='container'>
-            <nav>
-                <div class="nav-wrapper amber">
-                  <a href="/" class="brand-logo">Friendly Bakery</a>
-                  <ul id="nav-mobile" class="right hide-on-med-and-down">
-                      <li><a href='/about'>ABOUT</a></li>
-                      <li><a href='/visit'>VISIT</a></li>
-                      <li><a href='/admin'>ADMIN</a></li>
-                  </ul>
-                </div>
-            </nav>
-            <div class='content'>
-                <%= yield %>
+        <nav>
+            <div class="nav-wrapper amber">
+                <a href="/" class="brand-logo center">Friendly Bakery</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href='/cakes'>CAKES</a></li>
+                    <li><a href='/cookies'>COOKIES</a></li>
+                    <li><a href='/muffins'>MUFFINS</a></li>
+                    <li><a href='/about'>ABOUT</a></li>
+                    <li><a href='/visit'>VISIT</a></li>
+                </ul>
             </div>
-            <footer class="page-footer amber">
-                    <div class="container">
-                        © 2018 Friendly Bakery
-                        <a class="grey-text text-lighten-4 right" href="#!">YELP</a>
-                    </div>
-            </footer>
+        </nav>
+        <div class='container'>
+            <%= yield %>
         </div>
+        <footer class="page-footer amber">
+            <div class="container">
+                © 2018 Friendly Bakery
+            </div>
+            <a href='/admin'>ADMIN</a>
+        </footer>
         <script src="/main.js"></script>
     </body>
 </html>
