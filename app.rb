@@ -60,7 +60,7 @@ get '/admin' do
     erb :admin
 end
 
-post '/email' do
+post '/index' do
     @inventory = $bakery
     email = params[:email]
     text = (erb :admin)
@@ -75,4 +75,5 @@ post '/email' do
     puts response.headers
     email = true
     redirect '/'
+
 end
