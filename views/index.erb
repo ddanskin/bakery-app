@@ -1,15 +1,5 @@
-<div class="row">
-    <form class="col s12" action='/index' method='POST'>
-        <h4>JOIN OUR MAILING LIST!</h4>
-        <p>Get updates on our tasty offerings and sweet deals delivered to your inbox!</p>
-        <div class="row">
-            <div class="input-field col s12">
-                <input name="email" type="email" class="validate">
-                <label for="email">Email</label>
-                <span class="helper-text" data-error="wrong" data-success="right">ex: your_name@email.com</span>
-            </div>
-        </div>
-    </form>
+<div class="row mailing_list">
+    <%= erb @mailer %>
 </div>
 
 <div class='row center'>
@@ -17,15 +7,14 @@
         <img class="featured" src="/images/cake.jpg">
         <a href='/cakes'><h3>CAKES</h3></a>
     </div>
-    
+
     <div class="col s12 m6 l4 bakery_items">
         <img class="featured" src="/images/cookies.jpg">
         <a href='/cookies'><h3>COOKIES</h3></a>
     </div>
-    
+
     <div class="col s12 m6 l4 bakery_items">
         <img class+"featured" src="/images/muffins.jpg">
         <a href='/muffins'><h3>MUFFINS</h3></a>
     </div>
 </div>
-

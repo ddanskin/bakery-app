@@ -19,8 +19,14 @@ $bakery.cookies[@new_cookie_three.flavor.to_sym] = @new_cookie_three
 $bakery.muffins[@new_muffin_one.flavor.to_sym] = @new_muffin_one
 $bakery.muffins[@new_muffin_two.flavor.to_sym] = @new_muffin_two
 $bakery.muffins[@new_muffin_three.flavor.to_sym] = @new_muffin_three
+email = false
 
 get '/' do
+    if email
+        @mailer = :email_confirm
+    else
+        @mailer = :email_form
+    end
     erb :index
 end
 
@@ -60,14 +66,14 @@ post '/index' do
     text = (erb :admin)
     from = Email.new(email: 'danielle.danskin@gmail.com')
     to = Email.new(email: email)
-    subject = 'bakery catalog'
+    subject = 'Friendly Bakery Catalog'
     content = Content.new(type: 'text/html', value: text)
     mail = Mail.new(from, subject, to, content)
     sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
     response = sg.client.mail._('send').post(request_body: mail.to_json)
-    #puts response.status_code
-    #puts response.body
-    #puts response.parsed_body
-    #puts response.headers
-    erb :index
+    puts response.status_code
+    puts response.headers
+    email = true
+    redirect '/'
+
 end
