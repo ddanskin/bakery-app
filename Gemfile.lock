@@ -10,8 +10,8 @@ GEM
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.5.2)
     mustermann (1.0.2)
-    rack (2.0.4)
-    rack-protection (2.0.1)
+    rack (2.0.5)
+    rack-protection (2.0.2)
       rack
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
@@ -25,10 +25,10 @@ GEM
     sendgrid-ruby (5.2.0)
       ruby_http_client (~> 3.2)
       sinatra (>= 1.4.7, < 3)
-    sinatra (2.0.1)
+    sinatra (2.0.2)
       mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.1)
+      rack-protection (= 2.0.2)
       tilt (~> 2.0)
     tilt (2.0.8)
 
@@ -39,7 +39,7 @@ DEPENDENCIES
   json!
   materialize-sass (~> 1.0.0.beta)!
   sendgrid-ruby!
-  sinatra!
+  sinatra (~> 2.0.2)!
 
 BUNDLED WITH
    1.16.1
